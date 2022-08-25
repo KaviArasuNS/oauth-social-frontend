@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { auth } from "./firebase";
 import { setUser } from "./redux/actions";
+import Navbar from "./components/Navbar";
 
 function App() {
   const dispatch = useDispatch();

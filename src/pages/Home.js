@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Navbar from "../components/Navbar";
 import { logoutInitiate } from "../redux/actions";
 
 const Home = () => {
@@ -11,9 +12,12 @@ const Home = () => {
       dispatch(logoutInitiate());
     }
   };
+
+  console.log(currentUser.displayName);
   return (
     <div>
-      <h2>Welcome to Our Site</h2>
+      <Navbar currentUser={currentUser} />
+      <h2>Welcome to Our Site {currentUser.displayName}</h2>
       <br />
       <button className="btn btn-danger" onClick={handleAuth}>
         Logout
