@@ -113,3 +113,9 @@
     content: "Google+";
   }
 }
+
+.github {
+  padding: 5px;
+  margin-top: 15px;
+  border-radius: 10px;
+}

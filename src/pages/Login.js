@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import {
   fbSignInInitiate,
+  githubSignInInitiate,
   googleSignInInitiate,
   loginInitiate,
 } from "../redux/actions";
@@ -29,6 +30,10 @@ const Login = () => {
   };
   const handleFBSignIn = () => {
     dispatch(fbSignInInitiate());
+  };
+
+  const handleGithubSignIn = () => {
+    dispatch(githubSignInInitiate());
   };
 
   const handleSubmit = (e) => {
@@ -72,6 +77,15 @@ const Login = () => {
             >
               <span>
                 <i className="fab fa-facebook-f"></i> Sign In With Facebook
+              </span>
+            </button>
+            <button
+              className="github"
+              type="button"
+              onClick={handleGithubSignIn}
+            >
+              <span>
+                <i class="fa-brands fa-github"></i> Sign In With Github
               </span>
             </button>
           </div>
