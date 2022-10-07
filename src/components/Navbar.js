@@ -37,14 +37,17 @@ export default function NavbarBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Cool New Animation Every Week
           </Typography>
-          <Link to="https://www.github.com/kaviarasuns/oauth-social-frontend/blob/master/src/components/Magic.js">
+          <a
+            href="https://www.github.com/kaviarasuns/oauth-social-frontend/blob/master/src/components/Magic.js"
+            target="_blank"
+          >
             <Button
               color="inherit"
               style={{ fontWeight: "bold", color: "black" }}
             >
               For Github Source
             </Button>
-          </Link>
+          </a>
 
           <Button color="inherit" style={{ fontWeight: "bold" }}>
             {currentUser.displayName}
