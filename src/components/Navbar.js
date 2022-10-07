@@ -9,6 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutInitiate } from "../redux/actions";
 import { Avatar } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export default function NavbarBar() {
   const { currentUser } = useSelector((state) => state.user);
@@ -36,6 +37,15 @@ export default function NavbarBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Cool New Animation Every Week
           </Typography>
+          <Link to="https://www.github.com/kaviarasuns/oauth-social-frontend/blob/master/src/components/Magic.js">
+            <Button
+              color="inherit"
+              style={{ fontWeight: "bold", color: "black" }}
+            >
+              For Github Source
+            </Button>
+          </Link>
+
           <Button color="inherit" style={{ fontWeight: "bold" }}>
             {currentUser.displayName}
           </Button>
