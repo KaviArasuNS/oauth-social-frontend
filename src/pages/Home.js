@@ -4,6 +4,7 @@ import BarChart from "../components/BarChart";
 import Navbar from "../components/Navbar";
 import { logoutInitiate } from "../redux/actions";
 import { API } from "../global";
+import Magic from "../components/Magic";
 
 const Home = () => {
   const [debt, setDebt] = useState();
@@ -37,16 +38,34 @@ const Home = () => {
   const { currentUser } = useSelector((state) => state.user);
 
   console.log(currentUser.displayName);
+
   return (
-    <div>
+    <div style={{ width: "100vw" }}>
       <Navbar />
-      <br />
-      {/* <button className="btn btn-danger" onClick={handleAuth}>
-        Logout
-      </button> */}
-      {debt ? <BarChart chartData={chartData} /> : "Loading..."}
+      <Magic />
     </div>
   );
 };
 
 export default Home;
+
+// function createBoxes() {
+//   for (i = 0; i < 4; i++) {
+//     for (let j = 0; j < 4; j++) {
+//       const box = document.createElement("div");
+//       box.classList.add("box");
+//       box.style.backgroundPosition = `${-j * 125}px ${-i * 125}px`;
+
+//       boxesContainer.appendChild(box);
+//     }
+//   }
+// }
+
+{
+  /* <button className="btn btn-danger" onClick={handleAuth}>
+        Logout
+      </button> */
+}
+{
+  /* {debt ? <BarChart chartData={chartData} /> : "Loading..."} */
+}

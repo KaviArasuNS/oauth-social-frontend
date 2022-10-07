@@ -21,7 +21,7 @@ export default function NavbarBar() {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, position: "fixed", top: "10px", width: "100vw" }}>
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -34,7 +34,7 @@ export default function NavbarBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+            Cool New Animation Every Week
           </Typography>
           <Button color="inherit" style={{ fontWeight: "bold" }}>
             {currentUser.displayName}
